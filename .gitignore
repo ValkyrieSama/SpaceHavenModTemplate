@@ -26,3 +26,8 @@ replay_pid*
 target/
 .DS_Store
 spacehaven.jar
+
+# Intellij
+.idea/
+*.iml
+*.iws

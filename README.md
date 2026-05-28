@@ -23,7 +23,9 @@ OS name: "mac os x", version: "14.0", arch: "x86_64", family: "mac"
 ### Add Space Haven as a dependency
 This is required for AspectJ and Maven to locate the game's classes. I cannot add the game's .jar file to this repo for obvious reasons.  
 First, navigate into the repo with `cd /path/to/SpaceHavenModTemplate`. Then, add the file with  
-`mvn install:install-file -DgroupId="fi.bugbyte" -DartifactId=spacehaven -Dpackaging=jar -Dversion=1.0.0 -Dfile="</path/to/spacehaven.jar>" -DgeneratePom=true`  
+```shell
+mvn install:install-file -DgroupId="fi.bugbyte" -DartifactId=spacehaven -Dpackaging=jar -Dversion="1.0.0" -Dfile="</path/to/spacehaven.jar>" -DgeneratePom=true
+```
 
 Make sure to use the correct file path in the `-Dfile` argument above.  
 Note: On MacOS, the game is shipped as a `.app` file. Don't panic, just give the path as `</path/to/spacehaven.app/Contents/Resources/spacehaven.jar`  

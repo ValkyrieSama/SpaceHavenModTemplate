@@ -25,11 +25,11 @@ public class storageGuiAspect {
     //public void construct(JoinPoint joinPoint) throws Throwable {
     //};
 
-    @Pointcut("execution(void fi.bugbyte.spacehaven.gui.GUIHelper$PlayerShipListItem.updateMass()) && within(fi.bugbyte..*)")
-    public void postUpdateMass() {
+    @Pointcut("execution(void fi.bugbyte.spacehaven.gui.GUIHelper$PlayerShipListItem.update()) && within(fi.bugbyte..*)")
+    public void postUpdate() {
     }
 
-    @After("postUpdateMass()")
+    @After("postUpdate()")
     public void updateGui(JoinPoint joinPoint) throws Throwable {
         PlayerShipListItem _this = (PlayerShipListItem) joinPoint.getThis();
         
